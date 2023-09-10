@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="fittingContainer">
+    <div class ="clothesField">
+        <div class="fittingElement">
+            <div class="header">Голова</div>
+            <div class="fittingItems">
+                <div class="fitEl">
+                    <div class="fittingImage">
+                        <img id = "addHead" src="../static/add.png">
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="fittingElement">
+            <div class="header">Торс</div>
+            <div class="fittingItems">
+                <div class="fitEl">
+                    <div class="fittingImage">
+                        <img id = "addBody" src="../static/add.png">
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="fittingElement">
+            <div class="header">Штаны</div>
+            <div class="fittingItems">
+                <div class="fitEl">
+                    <div class="fittingImage">
+                        <img id = "addTrousers" src="../static/add.png">
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="fittingElement">
+            <div class="header">Ботинки</div>
+            <div class="fittingItems">
+                <div class="fitEl">
+                    <div class="fittingImage">
+                        <img id = "addShoes" src="../static/add.png">
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="fittingElement">
+            <div class="header">Аксессуары</div>
+            <div class="fittingItems">
+                <div class="fitEl">
+                    <div class="fittingImage">
+                        <img id = "addAccessories" src="../static/add.png">
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fittingControls">
+        <div class="fitTitleEdit">
+            <input id = "fitTitle" type="text" name="feedback" placeholder="Название образа">
+        </div>
+        <div>
+            <div class="fitPhotoDiv">
+            <div class="header">Фото</div>
+            {% csrf_token %}
+            <input id = "fitPhoto" type="file">
+            </div>
+        </div>
+        <div class="fittingElement">
+            <div class="header">Запланировать</div>
+            <input id="fitDate" type="date">
+            <input id="fitTime" type="time">
+            <input id="fitButton" type="button" value="Сбросить">
+        </div>
+        <button id = "create-object-button">Сохранить</button>
+    </div>
+</div>
+
+{% endblock %}

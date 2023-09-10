@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="wardContainer">
+    <div class="wardItem" style="background-image: url(../static/wardrobe_icons/heads.jpg); background-size: cover; background-position: center;">
+        <div class="wardItemText">
+            <a href="{% url 'heads' %}">Head</a>
+        </div>
+    </div>
+    <div class="wardItem" style="background-image: url(../static/wardrobe_icons/bodies.jpg); background-size: cover; background-position: center;">
+        <div class="wardItemText">
+            <a href="{% url 'bodies' %}">Body</a>
+        </div>
+    </div>
+    <div class="wardItem" style="background-image: url(../static/wardrobe_icons/trousers1.jpg); background-size: cover; background-position: center;">
+        <div class="wardItemText">
+            <a href="{% url 'trousers' %}">Trousers</a>
+        </div>
+    </div>
+    <div class="wardItem" style="background-image: url(../static/wardrobe_icons/shoes.jpg); background-size: cover; background-position: center;">
+        <div class="wardItemText">
+            <a href="{% url 'shoes' %}">Shoes</a>
+        </div>
+    </div>
+    <div class="wardItem" style="background-image: url(../static/wardrobe_icons/accessories.jpg); background-size: cover; background-position: center;">
+        <div class="wardItemText" style="font-size: 50px;">
+            <a href="{% url 'accessories' %}">Accessories</a>
+        </div>
+    </div>
+    <div class="wardItem" style="background-image: url(../static/wardrobe_icons/images.jpg); background-size: cover; background-position: center;">
+        <div class="wardItemText">
+            <a href="{% url 'images' %}">Images</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

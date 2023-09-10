@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="../static/main/baseStyle.css">
+    <link rel="icon" href="../static/main/favicon.ico">
+    <script src="../static/main/sctipt.js" defer></script>
+    <title>{{title}}</title>
+</head>
+<body>
+    <div class="headContainer">
+    <div class = "title">
+        <div id = "LOOK">LOOK</div>
+        <div id = "today">today</div>
+    </div>
+    <div class="weatherWdidget">
+      <div class="title">Погода сейчас</div>
+      <div class="info">
+        <table>
+          <tr>
+            <td>Город:</td>
+            <td class="city"></td>
+          </tr>
+          <tr>
+            <td>Температура:</td>
+            <td class="temperature"></td>
+          </tr>
+          <tr>
+            <td>Погода:</td>
+            <td class="weather"></td>
+          </tr>
+        </table>
+        <div class="icon"></div>
+      </div>
+    </div>
+    <div id = "userInfo">
+        <div id = "avatar"><img src="../static/main/noavatar.png"></div>
+        <div id = "name"></div>
+        <div id = "auth"><a href="{% url 'login' %}">Вход</a>/<a href="{% url 'registration' %}">Регистрация</a></div>
+    </div>
+    </div>
+    
+    <div class="contentContainer">
+    <div class="navigation">
+        <a href="{% url 'main' %}"><div>Главная</div></a>
+        <a href="{% url 'fitting' %}"><div>Примерочная</div></a>
+        <a href="{% url 'wardrobe' %}"><div>Гардероб</div></a>
+    </div>
+    <div class = "content">
+    {% block content %}
+    {% endblock %}
+    </div>
+    </div>
+    
+    <footer>
+       <p>Сделано с любовью</p>
+       <p><a href="https://github.com/KONOHA-GANGSTA">Мой gitHub</a></p>
+    </footer>
+</body>
+</html>
